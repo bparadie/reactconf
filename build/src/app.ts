@@ -12,6 +12,11 @@ interface InputEvent {
   target: HTMLInputElement;
 }
 
+interface AppElement
+{
+    className: string;
+}
+
 class App extends React.Component<any, State> {
 
   public state: State = {
@@ -44,7 +49,7 @@ class App extends React.Component<any, State> {
         this.setState({inputText: e.target.value});
     }
 
-	public render(): React.RenderResult {
+	public render(): React.ReactDOMElement<AppElement> {
 	    var self: App = this;
 		return (
 		React.createElement("div", {className: "app"}, 

@@ -6,6 +6,4 @@
 
 declare module "react/addons" {
    function jsx(jsx?: string): React.ReactElement<any>;
-
-    type RenderResult = ReactDOMElement<{ className: string; }>;
 }
